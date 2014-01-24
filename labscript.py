@@ -1,15 +1,28 @@
+#####################################################################
+#                                                                   #
+# /labscript.py                                                     #
+#                                                                   #
+# Copyright 2013, Monash University                                 #
+#                                                                   #
+# This file is part of the program labscript, in the labscript      #
+# suite (see http://labscriptsuite.org), and is licensed under the  #
+# Simplified BSD License. See the license.txt file in the root of   #
+# the project for the full license.                                 #
+#                                                                   #
+#####################################################################
+
 from __future__ import division
 import os
 import sys
 import subprocess
 import keyword
 
-import h5_lock, h5py
+import labscript_utils.h5_lock, h5py
 from pylab import *
 
 import functions
 try:
-    from unitconversions import *
+    from labscript_utils.unitconversions import *
 except:
     print 'Failed to import unit conversion classes'
 
